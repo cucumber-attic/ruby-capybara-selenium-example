@@ -43,5 +43,5 @@ Tell Selenium/Firefox to use it:
     # Windows
     SET http_proxy=http://your.proxy:8080
 
-If you have a separate proxy for htttps, define
+If you have a separate proxy for https, define
 the `https_proxy` environment variable as well.
