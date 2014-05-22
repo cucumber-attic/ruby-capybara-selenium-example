@@ -13,6 +13,12 @@ if ENV['http_proxy']
     profile["network.proxy.http"] = uri.host
     profile["network.proxy.http_port"] = uri.port
 
+    if ENV['https_proxy']
+      uri = URI(ENV['https_proxy'])
+      profile["network.proxy.https"] = uri.host
+      profile["network.proxy.https_port"] = uri.port
+    end
+
     Capybara::Selenium::Driver.new(app, :profile => profile)
   end
 end
